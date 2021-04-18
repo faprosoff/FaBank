@@ -7,4 +7,4 @@ Encontrarás los README correspondientes al back y front en:
 * techu-front/README.md
 
 ## Demo
-Podrás ver la demo subida en la raíz del proyecto
+Podrás ver la demo subida en la raíz del proyecto junto con una presentación
