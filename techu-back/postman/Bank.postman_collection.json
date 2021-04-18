@@ -1,0 +1,469 @@
+{
+	"info": {
+		"_postman_id": "f2b3741c-1d39-44dd-96c3-cff6b460bab9",
+		"name": "Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"name\": {\n        \"firstName\": \"Diego\",\n        \"lastName\": \"Aprosoff\"\n    },\n    \"email\": \"daprosoff@gmail.com\",\n    \"password\": \"fede11111\",\n    \"document\": \"37932476\",\n    \"documentType\": \"DNI\",\n    \"address\": \"Llavallol 3000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"daprosoff@gmail.com\",\n    \"password\": \"fede11111\"\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mis datos",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU5MThkNDM3NzA2NDZmZjdhMTQ3OWIiLCJpYXQiOjE2MDk4MTg4Mjl9.E9nDPJayZ2f2u_DJbvQH6zY7bkcyCs0vLV7m5dcZO5Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "5fe918d43770646ff7a1479b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmExODI2NTY2YzhmNTE5MGM1ODU2NWQiLCJpYXQiOjE2MDQ0MzEwNTF9.FOSFHSmrk7qk0s7WQKRlqull3K-m_angKuvmF8VFKGg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"Nueva dirección 0001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "5fe8edc125bcf72f5dd4d8e7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "Create contact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU4ZWRjMTI1YmNmNzJmNWRkNGQ4ZTciLCJpYXQiOjE2MDkxMDA4MzJ9.Gkibc1uqgHWoASYyAUilgp0FAPncT43A02wPeaJN_jw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU5MTk4ZTM3NzA2NDZmZjdhMTQ3OWUiLCJpYXQiOjE2MDk3OTQ1MDZ9.wONm2J6M387rh4D89riIxnQexFm94fBkEqbn8wv1ru0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"referenceName\": \"Bruce\",\n    \"fullName\": \"BRUCE LEE\",\n    \"cbu\": \"2231231231201232112318\",\n    \"alias\": \"PLAYA_SOL_ARENA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get contact",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU4ZWRjMTI1YmNmNzJmNWRkNGQ4ZTciLCJpYXQiOjE2MDkxMDA4MzJ9.Gkibc1uqgHWoASYyAUilgp0FAPncT43A02wPeaJN_jw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU5MTk4ZTM3NzA2NDZmZjdhMTQ3OWUiLCJpYXQiOjE2MDk3OTQ1MDZ9.wONm2J6M387rh4D89riIxnQexFm94fBkEqbn8wv1ru0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Contact",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU5MTk4ZTM3NzA2NDZmZjdhMTQ3OWUiLCJpYXQiOjE2MDk3OTQ1MDZ9.wONm2J6M387rh4D89riIxnQexFm94fBkEqbn8wv1ru0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/contacts/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contacts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5ff3893b454093297d688235"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmY0ZWNiZjNhZDZiZjgxOTM0MDc1NGIiLCJpYXQiOjE2MDk4ODY5MjJ9.aCmORXRG2chS3SJX4XBK7t1ju_-OUdzlGQev8DYIgaI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subsidiary\": 1234,\n    \"alias\": \"CUENTA_3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmY0ZWNiZjNhZDZiZjgxOTM0MDc1NGIiLCJpYXQiOjE2MDk4ODY5MjJ9.aCmORXRG2chS3SJX4XBK7t1ju_-OUdzlGQev8DYIgaI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmY0ZWNiZjNhZDZiZjgxOTM0MDc1NGIiLCJpYXQiOjE2MDk4ODY5MjJ9.aCmORXRG2chS3SJX4XBK7t1ju_-OUdzlGQev8DYIgaI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/accounts/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"accounts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5ff4ece93ad6bf819340754d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU5MThiYzM3NzA2NDZmZjdhMTQ3OWEiLCJpYXQiOjE2MDk4NjMzMDJ9.p7AnV7vufx1NWFPyDOmEtmTZbCa-CDxMkWTAeg4DZU8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"alias\": \"Hola_Mundo\",\n    \"active\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/accounts/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"accounts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5ff4aefbe750bb26daa191fa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Movement",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmY0ZWNiZjNhZDZiZjgxOTM0MDc1NGIiLCJpYXQiOjE2MDk4ODY5MjJ9.aCmORXRG2chS3SJX4XBK7t1ju_-OUdzlGQev8DYIgaI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"CA\",\n    \"description\": \"Varios\",\n    \"amount\": 50,\n    \"destination\": {\n        \"alias\": \"CUENTA_2\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/accounts/:id/movements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"accounts",
+								":id",
+								"movements"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5ff4ee2e24cfa4836bbbb466"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

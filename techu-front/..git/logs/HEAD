@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 100c6b33ab13aa8418487af39bfb9be84bc09e66 faprosoff <aprosoff.federico@gmail.com> 1611102414 -0300	clone: from https://faprosoff94@bitbucket.org/faprosoff94/techu-front.git
+100c6b33ab13aa8418487af39bfb9be84bc09e66 590122d75ea3bf868f48e0ca30bcd33bb698a583 faprosoff <aprosoff.federico@gmail.com> 1611102429 -0300	checkout: moving from master to develop
+590122d75ea3bf868f48e0ca30bcd33bb698a583 c0bb772cc87ac83306306e29780ab49e01cd3f1a faprosoff <aprosoff.federico@gmail.com> 1611102750 -0300	commit: Estilos css
+c0bb772cc87ac83306306e29780ab49e01cd3f1a 68169f03defc829c38219a9c3ef3d04a9dbdb901 faprosoff <aprosoff.federico@gmail.com> 1611102773 -0300	commit: Update config
+68169f03defc829c38219a9c3ef3d04a9dbdb901 bd91eae19c3811504672f1840fb2df327e61728f faprosoff <aprosoff.federico@gmail.com> 1611102834 -0300	commit: Cotizaciones view y otros
+bd91eae19c3811504672f1840fb2df327e61728f 97372764874f4860a3ee626666042b6ecd0c27ea faprosoff <aprosoff.federico@gmail.com> 1611202527 -0300	commit: Refactor config por routes
+97372764874f4860a3ee626666042b6ecd0c27ea 401cdf25f494ca0201458c6d7f9c2e58e80dda00 faprosoff <aprosoff.federico@gmail.com> 1611202617 -0300	commit: Vista cotizaciones, transferir a contactos y conversor moneda
+401cdf25f494ca0201458c6d7f9c2e58e80dda00 723fc1e66f06788957024a889393f58267d6576f faprosoff <aprosoff.federico@gmail.com> 1611270188 -0300	commit: Actualización README.md
+723fc1e66f06788957024a889393f58267d6576f d2864d74413377cd247cf09c677fd67ce63ca7ee faprosoff <aprosoff.federico@gmail.com> 1611520368 -0300	commit: Docker
+d2864d74413377cd247cf09c677fd67ce63ca7ee 77c66be4654f2fb6600da90675969969f9d07a25 faprosoff <aprosoff.federico@gmail.com> 1611540430 -0300	commit: Diseño cambios varios
+77c66be4654f2fb6600da90675969969f9d07a25 0843dd8ccc44bd225e2f0ea94c9a388346ad1a0b faprosoff <aprosoff.federico@gmail.com> 1611542787 -0300	commit: table styles y actualizacion regalos
+0843dd8ccc44bd225e2f0ea94c9a388346ad1a0b 66cabb46851f1ebd21b7cc53a61499ddfc7d4314 faprosoff <aprosoff.federico@gmail.com> 1611713675 -0300	commit: Correcciones
+66cabb46851f1ebd21b7cc53a61499ddfc7d4314 7c56f83126c343fb9487dbc5bb1908ca1ad3e408 faprosoff <aprosoff.federico@gmail.com> 1611801462 -0300	commit: Se agrega folder img a dockerfile
+7c56f83126c343fb9487dbc5bb1908ca1ad3e408 179f3f8956153720ac5f0f408168283684ac92ea faprosoff <aprosoff.federico@gmail.com> 1611888560 -0300	commit: Se agregan espaciados en vistas

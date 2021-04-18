@@ -1,0 +1,11 @@
+FROM nginx:latest
+
+RUN apt-get update
+
+COPY ./fabank.html /usr/share/nginx/html/index.html
+
+WORKDIR /usr/share/nginx/html/
+
+RUN mkdir dist
+
+COPY ./dist dist

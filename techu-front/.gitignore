@@ -1,0 +1,31 @@
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,polymer
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,polymer
+
+### Polymer ###
+#Installed components via bower
+bower_components/
+
+#Installed modules via npm
+node_modules/
+
+#Polymer-cli builds
+build/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,polymer
+
+dist
+.cache
+.vs

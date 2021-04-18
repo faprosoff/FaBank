@@ -1,0 +1,32 @@
+version: '3'
+services:
+  frontend:
+    build:
+        context: ./techu-front
+        dockerfile: dockerfile
+    depends_on: 
+      - backend
+    ports:
+      - '80:80'
+    command: nginx -g 'daemon off;'
+  backend:
+    build:
+        context: ./techu-back
+        dockerfile: dockerfile
+    depends_on: 
+      - mongodb
+    restart: always
+    environment:
+      - DB_CONNECTION=mongodb
+    ports:
+      - '3000:3000'
+    links:
+      - mongodb
+    command: npm run start
+  mongodb: 
+    image: 'mongo:4.4.2'
+    volumes: 
+      - ../data/mongodb:/data/db
+    ports:
+      - '27017:27017'
+  
